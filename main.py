@@ -1,7 +1,7 @@
+"""Module for calculating the angle of rotation of the ball after a specified time."""
 # review for:
 # Kolkareva
 # Kuznetsova
-PI = 3.14
 
 
 def degree(radius: float,
@@ -9,5 +9,5 @@ def degree(radius: float,
            acceleration: float,
            velocity: float = 0) -> float:
     spatium = velocity * time + ((acceleration * time ** 2) / 2)
-    length = 2 * PI * radius
+    length = 2 * 3.14 * radius
     return (spatium % length) / length * 360
