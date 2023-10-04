@@ -14,7 +14,14 @@ def degree(radius: float, time: float, acceleration: float, velocity: float = 0)
 
     Returns:
         float - Rotation angle of the starting point.
+
+    Raises:
+        Exception: wrong input data.
     """
+    if radius <= 0:
+        raise Exception('Radius must be greater than zero.')
+    if time < 0:
+        raise Exception('Radius must be greater than zero.')
     full_degree = 360
     spatium = velocity * time + ((acceleration * time ** 2) / 2)
     length = 2 * pi * radius
