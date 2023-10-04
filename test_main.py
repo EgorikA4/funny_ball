@@ -88,7 +88,7 @@ negative_tests_division_by_zero = [
 ]
 
 
-@pytest.mark.xfail(negative_tests_division_by_zero, ZeroDivisionError)
+@pytest.mark.xfail(negative_tests_division_by_zero, reason=ZeroDivisionError)
 def test_negative_calculate_by_zero(args):
     """Negative test calculate with radius equal zero.
 
@@ -112,7 +112,7 @@ tests_with_negative_values = [
 ]
 
 
-@pytest.mark.xfail(tests_with_negative_values)
+@pytest.mark.xfail(tests_with_negative_values, reason=Exception)
 def test_calcuate_with_negative_params(args):
     """Test calculate with negative parametrs.
 
