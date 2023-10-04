@@ -1,7 +1,6 @@
 """Module for calculating the angle of rotation of the ball after a specified time."""
-# review for:
-# Kolkareva
-# Kuznetsova
+
+from math import pi
 
 
 def degree(radius: float, time: float, acceleration: float, velocity: float = 0) -> float:
@@ -16,6 +15,7 @@ def degree(radius: float, time: float, acceleration: float, velocity: float = 0)
     Returns:
         float - Rotation angle of the starting point.
     """
+    full_degree = 360
     spatium = velocity * time + ((acceleration * time ** 2) / 2)
-    length = 2 * 3.14 * radius
-    return (spatium % length) / length * 360
+    length = 2 * pi * radius
+    return (spatium % length) / length * full_degree
