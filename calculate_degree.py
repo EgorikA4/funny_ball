@@ -18,4 +18,4 @@ def degree(radius: float, time: float, acceleration: float, velocity: float = 0)
     full_degree = 360
     spatium = velocity * time + ((acceleration * time ** 2) / 2)
     length = 2 * pi * radius
-    return (spatium % length) / length * full_degree
+    return round((spatium % length) / length * full_degree, 2)
